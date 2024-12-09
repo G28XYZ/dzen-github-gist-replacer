@@ -1,0 +1,1 @@
+export const TMessage = { action: "REPLACE", success: new Boolean };
