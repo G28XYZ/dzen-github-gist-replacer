@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "Dzen github gist replacer",
-    "version": "0.1",
+    "version": "10.12.2024",
     "description": "Преобразовывает в статье Dzen ссылки на github gist к формату отображения кода ( в старый формат )",
     "icons": {
       "16": "img/icon16.png",
