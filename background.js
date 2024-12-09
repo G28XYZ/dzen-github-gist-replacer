@@ -6,9 +6,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     switch (action) {
         case "REPLACE":
             (async () => {
-                const result = await sendMessageToContent(request);
+                await sendMessageToContent(request);
                 sendResponse(request);
-            })()
+            })();
             break;
         default:
             sendResponse(request);

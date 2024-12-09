@@ -13,7 +13,8 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 const doReplace = () => {
     const genRanHex = size => [...Array(size)].map(() => Math.floor(Math.random() * 16).toString(16)).join('');
-    const allGists = document.querySelectorAll('[data-testid="embed-block_external article-render__block"]');
+    let allGists = document.querySelectorAll('[data-testid="embed-block_external article-render__block"]');
+    !allGists?.length && (allGists = document.querySelectorAll('[class^="content--embed-block__block-"]'));
 
     const createIframe = (linkToGist) => {
         const iframe = document.createElement('iframe');
