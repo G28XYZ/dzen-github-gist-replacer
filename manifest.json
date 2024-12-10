@@ -2,7 +2,8 @@
     "manifest_version": 3,
     "name": "Dzen github gist replacer",
     "version": "10.12.2024",
-    "description": "Преобразовывает в статье Dzen ссылки на github gist к формату отображения кода ( в старый формат )",
+    "description": "Расширение преобразовывает в статье Дзен (контентная платформа) ссылки на github gist к формату отображения кода ( в старый формат )",
+    "author": "Aleksandr Kucherenko",
     "icons": {
       "16": "img/icon16.png",
       "32": "img/icon32.png",
@@ -11,14 +12,12 @@
     },
     "permissions": ["tabs", "activeTab", "storage", "scripting"],
     "background": {
-      "service_worker": "background.js",
-      "type": "module"
+      "service_worker": "background.js"
     },
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content.js"],
-        "type": "module"
+        "js": ["content.js"]
       }
     ],
     "action": {
